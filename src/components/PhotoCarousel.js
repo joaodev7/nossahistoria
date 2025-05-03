@@ -17,8 +17,8 @@ const photos = [
     "/images/10.JPEG",
     "/images/11.JPEG",
     "/images/13.JPEG",
-    "/images/14.jpeg",
-    "/images/15.JPG",
+    "/images/14.JPEG",
+    "/images/15.jpg",
 ];
 
   const settings = {
