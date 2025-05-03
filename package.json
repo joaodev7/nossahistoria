@@ -2,6 +2,7 @@
   "name": "ourlove",
   "version": "0.1.0",
   "private": true,
+  "homepage": "./",
   "dependencies": {
     "@testing-library/react": "^14.0.0",
     "@testing-library/dom": "^9.0.0",
