@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="app">
       <div className="section">
-        <PassionCounter startDate="2025-03-23" />
+        <PassionCounter startDate="2025-05-10T13:31:00" />
       </div>
       <div className="section">
         <PhotoCarousel />
