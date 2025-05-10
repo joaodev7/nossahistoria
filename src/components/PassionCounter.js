@@ -1,26 +1,29 @@
 import React, { useState, useEffect } from "react";
 
 function PassionCounter({ startDate }) {
-  const [days, setDays] = useState(0);
+  const [timePassed, setTimePassed] = useState({ days: 0, hours: 0, minutes: 0 });
 
   useEffect(() => {
-    const calculateDays = () => {
+    const calculateTime = () => {
       const start = new Date(startDate);
-      const today = new Date();
-      const diffTime = Math.abs(today - start);
-      const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-      setDays(diffDays);
+      const now = new Date();
+      const diffTime = Math.abs(now - start);
+
+      const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+      const diffHours = Math.floor((diffTime / (1000 * 60 * 60)) % 24);
+      const diffMinutes = Math.floor((diffTime / (1000 * 60)) % 60);
+
+      setTimePassed({ days: diffDays, hours: diffHours, minutes: diffMinutes });
     };
 
-    calculateDays();
-    const interval = setInterval(calculateDays, 1000 * 60 * 60 * 24); // Update daily
+    calculateTime();
+    const interval = setInterval(calculateTime, 1000 * 60); // Update every minute
     return () => clearInterval(interval);
   }, [startDate]);
 
   return (
     <div className="passion-counter">
-      <h1>❤️ {days} dias de paixão ❤️</h1>
-      <p>Desde o início do nosso amor!</p>
+      <h1>❤️ {timePassed.days} dias, {timePassed.hours} horas e {timePassed.minutes} minutos de paixão ❤️</h1>
     </div>
   );
 }
