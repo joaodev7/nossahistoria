@@ -14,8 +14,9 @@ function RomanticTimeline() {
     { date: "09/04/2025", title: "Primeiro aniversário do meu grude", message: "" },
     { date: "09/04/2025", title: "Conheci meus sogros", message: "" },
     { date: "12/04/2025", title: "Primeiro dia fit", message: "" },
-    { date: "12/04/2025", title: "Você conheceu minha família", message: "" },
+    { date: "12/04/2025", title: "Você conheceu seus sogros", message: "" },
     { date: "17/04/2025 a 20/04/2025", title: "Nosso primeiro acampamento", message: "" },
+    { date: "10/05/2025", title: "Oficializamos nosso relacionamento", message: "Eu escolho te amar e superar todas as adversidades" },
   ];
 
   return (
